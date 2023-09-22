@@ -20,12 +20,12 @@ Check those to extend funcionalities. (Like I replicated JPEG Quality https://gi
 
 # How to use
 
-Install it with
+Install it with:
 ```
 node install exif-photoshop --save
 ```
 
-Use it in your file like
+Use it in your file like:
 ```
 import * as EXIF_PHOTOSHOP from "exif-photoshop";
 
@@ -34,4 +34,32 @@ import * as EXIF_PHOTOSHOP from "exif-photoshop";
 const photoshopMetadata = await EXIF_PHOTOSHOP.parse(file);
 ```
 
-being file retreieved by input files or by drag-and-drop ev.dataTransfer.files
+being **file** retreieved by **input files** or by drag-and-drop **ev.dataTransfer.files**
+
+Output example:
+```
+{
+ "1092" : Uint8Array(151) [0, 0, 0, …],
+ "BackgroundColor" :  Uint8Array(10) [0, 0, 255, …],
+ "ColorHalftoningInfo" : Uint8Array(72) [0, 47, 102, …],
+ "ColorTransferFuncs" : Uint8Array(112) [0, 0, 255, …],
+ "GlobalAltitude" : Uint8Array(4) [0, 0, 0, …],
+ "GlobalAngle" : Uint8Array(4) [0, 0, 0, …],
+ "GridGuidesInfo" : Uint8Array(91) [0, 0, 0, …],
+ "IDsBaseValue" : Uint8Array(4) [0, 0, 3, …],
+ "IPTCData" : Uint8Array(15) [28, 1, 90, …],
+ "IPTCDigest" : Uint8Array(16) [205, 207, 250, …],
+ "JPEG_Quality" : {PhotoshopQuality: 5, PhotoshopFormat: 'Progressive', ProgressiveScans: 4}
+ "PhotoshopThumbnail" : Uint8Array(6869) [0, 0, 0, …],
+ "PixelInfo" : Uint8Array(12) [0, 0, 0, …],
+ "PrintFlags" : Uint8Array(9) [0, 0, 0, …],
+ "PrintFlagsInfo" : Uint8Array(10) [0, 1, 0, …],
+ "PrintInfo2" : Uint8Array(239) [0, 0, 0,  …],
+ "PrintScaleInfo" : Uint8Array(14) [0, 0, 0,  …],
+ "PrintStyle" : Uint8Array(557) [0, 0, 0, …],
+ "ResolutionInfo" : Uint8Array(16) [0, 72, 0, …],
+ "SliceInfo" : Uint8Array(851) [0, 0, 0, …],
+ "URL_List" : Uint8Array(4) [0, 0, 0, …],
+ "VersionInfo" : Uint8Array(87) [0, 0, 0,  …]
+}
+```
