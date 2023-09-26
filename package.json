@@ -1,6 +1,6 @@
 {
   "name": "exif-photoshop",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Javascript library that runs on browser to extract exif photoshop data such as jpeg compression",
   "main": "index.js",
   "scripts": {
