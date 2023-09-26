@@ -19,13 +19,15 @@ export function parse(file) {
                         resolve(photoshopTags);
                     } else {
                         console.warn("No photoshpo exif tags found.");
-                        reject();
+                        reject({});
                     }
                     break;
                 }
             }
+            console.warn("No photoshpo exif tags found.");
+            reject({});
         };
-        reader.onerror = reject;
+        reader.onerror = () => reject({});
         reader.readAsArrayBuffer(file);
     });
 }
