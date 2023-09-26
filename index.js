@@ -18,13 +18,13 @@ export function parse(file) {
                     if (photoshopTags) {
                         resolve(photoshopTags);
                     } else {
-                        console.warn("No photoshpo exif tags found.");
+                        console.warn("No photoshop exif tags found.");
                         resolve({});
                     }
                     break;
                 }
             }
-            console.warn("No photoshpo exif tags found.");
+            console.warn("No photoshop exif tags found.");
             resolve({});
         };
         reader.onerror = () => reject(`Error occurred reading file: ${file.name}`);
